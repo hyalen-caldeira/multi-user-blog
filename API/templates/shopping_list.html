@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Blog do Lalinha</title>
+    </head>
+
+    <body>
+        <form>
+            <h2>Add some food ...</h2>
+            <input type="text" name="food">
+            <button>Add</button>
+        </form>
+
+        <h2>Hello, {{name}}</h2>
+        {% if n == 1 %}
+            n eh igual a um
+        {% else %}
+            n nao eh igual a um
+        {%endif%}
+
+        <ol>
+        {% for x in range (1, n + 1) %}
+            <li>{{x ** 2}}</li>
+        {% endfor %}
+        </ol>
+    </body>
+</html>

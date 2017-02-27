@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post">
+        <label>
+            <div>Title</div>
+            <input type="text" name="title" value="{{title}}">
+        </label>
+        <label>
+            <div>Art</div>
+            <textarea name="art">{{art}}</textarea>
+        </label>
+        <div class="error">{{error}}</div>
+
+        <input type="submit">
+    </form>
+
+    {% if img_url %}
+        <img class="map" src="{{img_url}}">
+    {% endif %}
+
+    <hr>
+
+    {% for art in arts %}
+        <div class="art">
+            <div class="art_title">{{art.title}}</div>
+            <pre class="art-body">{{art.art}}</pre>
+        </div>
+    {% endfor %}
+{% endblock %}
